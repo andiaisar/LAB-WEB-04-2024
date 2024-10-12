@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1a1a2e;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-size: cover;
+    background-image: url("https://img.freepik.com/free-photo/whisky-with-ice-cubes-casino-chips-playing-card-green-poker-table_23-2147881156.jpg?t=st=1728622949~exp=1728626549~hmac=febf1fdfa2552a2da1b396a6a11baf37efa09ebbf4d026d25b2d2baa8c10ed5a&w=1800");
+}
+
+header {
+    background-color: #16213e;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #ffd700;
+    margin: 0;
+}
+
+#money-display {
+    font-size: 1.2em;
+    color: #4ecca3;
+    margin-top: 0.5rem;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+#table {
+    background-color: #0f3460;
+    border-radius: 50px;
+    padding: 2rem;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    margin-bottom: 2rem;
+    background-color: rgba(0, 0, 255, 0.5);
+    background-color: rgba(17, 48, 79, 0.7);
+}
+
+.card-area {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.card {
+    width: 100px;
+    height: 145px;
+    background-image: url('https://deckofcardsapi.com/static/img/back.png');
+    background-size: cover;
+    border-radius: 5px;
+    margin: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-front {
+    background-image: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: transparent;
+}
+
+.card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.card-red {
+    color: #e94560;
+}
+
+.card-top, .card-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-center {
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.score {
+    font-size: 1.2em;
+    text-align: center;
+    color: #ffd700;
+}
+
+#actions, #betting-area {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.action-btn {
+    background-color: #4ecca3;
+    color: #16213e;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.action-btn:hover {
+    background-color: #45b393;
+}
+
+#bet-amount {
+    padding: 0.8rem;
+    font-size: 1em;
+    border-radius: 5px;
+    border: none;
+    width: 100px;
+}
+
+#message {
+    font-size: 1.2em;
+    text-align: center;
+    margin: 1rem 0;
+    color: #ffd700;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #16213e;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    background-color: #16213e;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9em;
+}
+
+@media (max-width: 600px) {
+    #table {
+        padding: 1rem;
+    }
+    
+    .card {
+        width: 60px;
+        height: 90px;
+    }
+    
+    .action-btn {
+        padding: 0.6rem 1.2rem;
+    }
+}

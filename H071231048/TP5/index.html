@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack Simulasi - Hanya Untuk Hiburan</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Blackjack</h1>
+        <div id="money-display">Saldo: $<span id="money">5000</span></div>
+    </header>
+    
+    <main id="game-container">
+        <div id="table" >
+            <div id="Bandar-area" class="hidden">
+                <h2>Bandar</h2>
+                <div id="Bandar-cards" class="card-area"></div>
+                <div id="Bandar-score" class="score"></div>
+            </div>
+            
+            <div id="player-area" class="hidden">
+                <h2>Pemain</h2>
+                <div id="player-cards" class="card-area"></div>
+                <div id="player-score" class="score"></div>
+            </div>
+            
+            <div id="actions">
+                <button id="hit" class="action-btn"><i class="fas fa-plus"></i> Hit</button>
+                <button id="stand" class="action-btn"><i class="fas fa-hand-paper"></i> Stand</button>
+            </div>
+        </div>
+        
+        <div id="betting-area">
+            <input type="number" id="bet-amount" min="100" value="100">
+            <button id="place-bet" class="action-btn"><i class="fas fa-money-bill-wave"></i> Pasang Taruhan</button>
+        </div>
+        
+        <div id="message"></div>
+        
+        <button id="new-game" class="action-btn"><i class="fas fa-redo"></i> Permainan Baru</button>
+    </main>
+
+    <div id="game-over" class="modal hidden">
+        <div class="modal-content">
+            <h2>Game Over</h2>
+            <p>Anda kehabisan saldo simulasi!</p>
+            <button id="restart-game" class="action-btn"><i class="fas fa-power-off"></i> Mulai Ulang dengan $5000</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>TERUS BERJUANGG!!!! <br> YAKIN PASTI ADA JACKPOTNYAA</p>
+    </footer>
+
+    <script src="javaScript.js"></script>
+</body>
+</html>
