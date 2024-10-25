@@ -1,0 +1,42 @@
+body {
+    background-image: url(assets/img/uh.png);
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2px);
+    background: rgba(255, 255, 255, 0.3);
+}
+.card-header {
+    background-color: rgba(198, 46, 46, 0.5); 
+    color: white;
+    padding: 20px;
+    width: auto;
+    height: 130px;
+    backdrop-filter: blur(2px);
+}
+.card-body {
+    padding: 30px;
+}
+.btn-primary {
+    background-color: #C62E2E;
+    border-color: #C62E2E;
+}
+.btn-primary:hover {
+    background-color: #A52A2A;
+    border-color: #A52A2A;
+}
+.form-control:focus {
+    border-color: #C62E2E;
+    box-shadow: 0 0 0 0.2rem rgba(198, 46, 46, 0.25);
+}
+.logo {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
