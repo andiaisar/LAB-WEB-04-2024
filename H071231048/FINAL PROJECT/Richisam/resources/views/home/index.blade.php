@@ -41,93 +41,50 @@
             </div>
         </div>
     </nav>
-
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Dropdown button
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+  </ul>
+</div>
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h1>Richisam</h1>
-                    <p class="lead mb-4">Experience the perfect crunch with our signature crispy chicken. Made with love and our secret recipe.</p>
-                    <button class="order-btn btn-lg">Order Now</button>
-                </div>
-            <!-- Carousel -->
-            {{-- <div class="row"> --}}
-                <div class="col-lg-6">
-                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-                        </ol>
-                        <div class="carousel-inner" style="border-radius: 15px; overflow: hidden;">
+                <div class="col-lg-12">
+                    <!-- Horizontal Carousel -->
+                    <div id="horizontalCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="{{ asset('images/img02.jpg') }}" class="d-block w-100" alt="Slide 1" style="border-radius: 15px;">
+                                <div class="d-flex justify-content-center">
+                                    <img src="{{ asset('images/img02.jpg') }}" class="mx-2" alt="Slide 1">
+                                </div>
                             </div>
                             <div class="carousel-item">
-                                <img src="{{ asset('images/img03.jpg') }}" class="d-block w-100" alt="Slide 2" style="border-radius: 15px;">
+                                <img src="{{ asset('images/img06.jpg') }}" class="d-block w-20" alt="Slide 2">
                             </div>
                             <div class="carousel-item">
-                                <img src="{{ asset('images/img04.jpg') }}" class="d-block w-100" alt="Slide 3" style="border-radius: 15px;">
+                                <img src="{{ asset('images/img03.jpg') }}" class="d-block w-20" alt="Slide 3">
                             </div>
                             <div class="carousel-item">
-                                <img src="{{ asset('images/img05.jpg') }}" class="d-block w-100" alt="Slide 4" style="border-radius: 15px;">
+                                <img src="{{ asset('images/img04.jpg') }}" class="d-block w-20" alt="Slide 4">
                             </div>
                             <div class="carousel-item">
-                                <img src="{{ asset('images/img06.jpg') }}" class="d-block w-100" alt="Slide 5" style="border-radius: 15px;">
+                                <img src="{{ asset('images/img05.jpg') }}" class="d-block w-20" alt="Slide 5">
                             </div>
                         </div>
-                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <a class="carousel-control-prev" href="#horizontalCarousel" role="button" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="sr-only">Previous</span>
                         </a>
-                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <a class="carousel-control-next" href="#horizontalCarousel" role="button" data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="sr-only">Next</span>
                         </a>
-                    </div>
-                </div>
-            </div>
-        {{-- </div> --}}
-    </section>
-    <!-- Featured Dishes Section -->
-    <section class="featured-dishes">
-        <div class="container">
-            <h2 class="text-center mb-5">Featured Dishes</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="dish-card">
-                        <img src="{{ asset('images/featured1.jpg') }}" alt="Featured Dish 1" class="img-fluid">
-                        <div class="dish-content">
-                            <h3>Signature Dish</h3>
-                            <p>A delightful mix of flavors and textures.</p>
-                            <p class="price">From $12.99</p>
-                            <button class="order-btn">Order Now</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="dish-card">
-                        <img src="{{ asset('images/featured2.jpg') }}" alt="Featured Dish 2" class="img-fluid">
-                        <div class="dish-content">
-                            <h3>Chef's Special</h3>
-                            <p>Handpicked ingredients for a gourmet experience.</p>
-                            <p class="price">From $15.99</p>
-                            <button class="order-btn">Order Now</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="dish-card">
-                        <img src="{{ asset('images/featured3.jpg') }}" alt="Featured Dish 3" class="img-fluid">
-                        <div class="dish-content">
-                            <h3>Seasonal Delight</h3>
-                            <p>Fresh and vibrant flavors of the season.</p>
-                            <p class="price">From $10.99</p>
-                            <button class="order-btn">Order Now</button>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -142,7 +99,7 @@
                 <!-- Original Crispy -->
                 <div class="col-md-4">
                     <div class="category-card">
-                        <img src="{{ asset('images/img02.jpg') }}" alt="Original Crispy">
+                        <img src="{{ asset('images/img0.jpg') }}" alt="Original Crispy">
                         <div class="category-content">
                             <h3>Original Crispy</h3>
                             <p>Our classic crispy chicken with perfect seasoning</p>
@@ -155,7 +112,7 @@
                 <!-- Spicy Crispy -->
                 <div class="col-md-4">
                     <div class="category-card">
-                        <img src="{{ asset('images/img03.jpg') }}" alt="Spicy Crispy">
+                        <img src="{{ asset('images/img0.jpg') }}" alt="Spicy Crispy">
                         <div class="category-content">
                             <h3>Spicy Crispy</h3>
                             <p>Hot and crispy with our special spice blend</p>
@@ -167,7 +124,7 @@
                 <!-- Family Bucket -->
                 <div class="col-md-4">
                     <div class="category-card">
-                        <img src="{{ asset('images/img04.jpg') }}" alt="Family Bucket">
+                        <img src="{{ asset('images/img0.jpg') }}" alt="Family Bucket">
                         <div class="category-content">
                             <h3>Family Bucket</h3>
                             <p>Perfect for sharing with family and friends</p>
@@ -179,7 +136,7 @@
                 <!-- Family Bucket -->
                 <div class="col-md-4">
                     <div class="category-card">
-                        <img src="{{ asset('images/img05.jpg') }}" alt="Family Bucket">
+                        <img src="{{ asset('images/img0.jpg') }}" alt="Family Bucket">
                         <div class="category-content">
                             <h3>Family Bucket</h3>
                             <p>Perfect for sharing with family and friends</p>
@@ -191,7 +148,7 @@
                 <!-- Family Bucket -->
                 <div class="col-md-4">
                     <div class="category-card">
-                        <img src="{{ asset('images/img06.jpg') }}" alt="Family Bucket">
+                        <img src="{{ asset('images/img0.jpg') }}" alt="Family Bucket">
                         <div class="category-content">
                             <h3>Family Bucket</h3>
                             <p>Perfect for sharing with family and friends</p>
@@ -316,7 +273,33 @@
         </div>
     </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.bundle.min.js"></script>
-</body>
+    <!-- Add this before closing body tag -->
+    <div class="zoom-container" id="imageZoom">
+        <img src="" alt="Zoomed Image" id="zoomedImage">
+    </div>
+
+    {{-- <script>
+        // Image zoom functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const zoomContainer = document.getElementById('imageZoom');
+            const zoomedImage = document.getElementById('zoomedImage');
+            
+            // Add click event to all product images
+            document.querySelectorAll('.category-card img, #horizontalCarousel img').forEach(img => {
+                img.addEventListener('click', function() {
+                    zoomedImage.src = this.src;
+                    zoomContainer.style.display = 'flex';
+                });
+            });
+
+            // Close zoomed image when clicking outside
+            zoomContainer.addEventListener('click', function() {
+                this.style.display = 'none';
+            });
+        });
+    </script> --}}
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    
 </html>

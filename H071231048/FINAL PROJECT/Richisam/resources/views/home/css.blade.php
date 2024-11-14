@@ -2,7 +2,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <title>Richisam</title>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 
 <style>
@@ -59,7 +59,7 @@
     .hero {
         background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
         color: white;
-        padding: 5rem 0;
+        padding: 3rem 0;
         position: relative;
         overflow: hidden;
     }
@@ -82,6 +82,80 @@
         text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
     }
 
+    #horizontalCarousel .carousel-inner {
+        position: relative;
+    }
+
+    #horizontalCarousel .carousel-item {
+        transition: transform 0.6s ease-in-out;
+    }
+
+    #horizontalCarousel .carousel-inner .carousel-item {
+        flex: 0 0 33.33%; 
+        max-width: 33.33%;
+    }
+
+    /* Carousel Styling */
+    #horizontalCarousel .carousel-item img {
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    #horizontalCarousel .carousel-item img:hover {
+        transform: scale(1.03);
+    }
+
+    .carousel-control-prev, .carousel-control-next {
+        width: 50px;
+        height: 50px;
+        background: rgba(155, 44, 44, 0.8);
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 50px;
+        height: 50px;
+        background: rgba(155, 44, 44, 0.8);
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 0.8;
+    }
+    .carousel-control-prev {
+        left: 20px;
+    }
+
+    .carousel-control-next {
+        right: 20px;
+    }
+
+    .carousel-control-prev:hover,
+    .carousel-control-next:hover {
+        opacity: 1;
+    }
+
+    .carousel-indicators {
+        bottom: 20px;
+    }
+
+    .carousel-indicators li {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin: 0 5px;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .carousel-indicators .active {
+        background-color: white;
+    }
+
     /* Menu Categories */
     .menu-category {
         padding: 4rem 0;
@@ -94,6 +168,12 @@
         box-shadow: 0 5px 20px rgba(155, 44, 44, 0.15);
         transition: all 0.3s ease;
         margin-bottom: 30px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
     }
 
     .category-card:hover {
@@ -103,18 +183,26 @@
 
     .category-card img {
         width: 100%;
-        height: 200px;
+        height: 250px;
         object-fit: cover;
-        transition: transform 0.3s ease;
+        transition: all 0.5s ease;
     }
 
     .category-card:hover img {
-        transform: scale(1.05);
+        transform: scale(1.1);
+        filter: brightness(1.1);
     }
 
     .category-content {
         padding: 1.5rem;
         text-align: center;
+        background: rgba(255, 255, 255, 0.95);
+        position: relative;
+        z-index: 1;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     .category-content h3 {
@@ -144,6 +232,24 @@
         background: linear-gradient(to right, var(--secondary), var(--primary));
         transform: translateY(-2px);
         box-shadow: 0 4px 15px rgba(155, 44, 44, 0.3);
+    }
+
+    /* Image Overlay Effect */
+    .category-card::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0deg, rgba(155, 44, 44, 0.2) 0%, rgba(0,0,0,0) 50%);
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .category-card:hover::after {
+        opacity: 1;
     }
 
     /* Special Offers */
@@ -225,5 +331,57 @@
     .modal-body .text-primary:hover {
         color: var(--secondary) !important;
         text-decoration: none;
+    }
+
+    /* Image Zoom Styles */
+    .zoom-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        cursor: pointer;
+    }
+
+    .zoom-container img {
+        max-width: 90%;
+        max-height: 90vh;
+        object-fit: contain;
+        border-radius: 8px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+
+    /* Updated Grid Layout */
+    .menu-category .row {
+        margin: -15px;
+    }
+
+    .menu-category .col-md-4 {
+        padding: 15px;
+    }
+
+    /* Carousel Improvements */
+    .carousel-inner {
+        padding: 20px 0;
+    }
+
+    .carousel-item img {
+        cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+        .category-card img {
+            height: 200px;
+        }
+        
+        .carousel-control-prev,
+        .carousel-control-next {
+            display: none;
+        }
     }
 </style>
